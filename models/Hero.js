@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const heroSchema = new mongoose.Schema({
-    name: {type:String,required:true},
-    quirks: {type:String,required:true},
-    heroName: {type:String,required:true}
+    name: {type:String,},
+    quirks: {type:String,},
+    heroName: {type:String}
 });
 
 const HeroModel = mongoose.model("HeroModel",heroSchema);
