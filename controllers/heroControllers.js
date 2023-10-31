@@ -28,7 +28,7 @@ export const updateHero = async (req, res) => {
   try {
     const updatedHero = await Hero.findByIdAndUpdate(
         id,
-        {name, quriks, heroName},
+        {name, quirks, heroName},
         {new:true}
     );
     if (!updatedHero) {
@@ -47,7 +47,7 @@ export const updateHero = async (req, res) => {
 export const deleteHero = async (req, res) => {
     const {id} = req.params;
     try{
-        const deletedHero = await Hero.findByIdAndUpdate(id);
+        const deletedHero = await Hero.findByIdAndDelete(id);
         if(!deletedHero) {
             return res.status(404).json({error:"Person not found"});
         }
