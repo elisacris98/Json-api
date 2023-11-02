@@ -5,9 +5,16 @@ import chalk from "chalk";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+
 app.use(express.json());
+
+connectDB()
 app.use("/api", heroRoutes);
 
-app.listen(PORT, () =>{
-    console.log(chalk.green(`Server up on ${PORT}`));
-});
+    // SET UP SERVER TO LISTEN FOR REQUESTS ON PORT
+    app.listen(PORT, () => {
+      process.env.NODE_ENV === "production"
+        ? console.log(`Express server running in production on port ${PORT}`)
+        : console.log(`Express server running in development on: ${PORT}`);
+    });
