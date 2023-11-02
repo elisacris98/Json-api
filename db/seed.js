@@ -1,6 +1,5 @@
 import connectDB from "./connection.js";
 import HeroModel from "../models/Hero.js";
-
 import seedData from "../seed/data.json" assert { type: "json"};
 
 const seedDB = async () => {
