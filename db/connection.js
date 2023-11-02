@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 import chalk from "chalk";
 
-let MONGODB_URI = process.env.PROD_MONGODB ||"mongodb://127.0.0.1:27017/project2"
+let MONGODB_URI = process.env.MONGODB || "mongodb://127.0.0.1:27017/project2"
 
 mongoose.set("returnOriginal", false)
 
