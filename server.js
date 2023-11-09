@@ -2,13 +2,14 @@ import express from "express";
 import connectDB from "./db/connection.js";
 import heroRoutes from "./routes/index.js";
 import chalk from "chalk";
-import cors from "cros";
+import cors from "cors";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 
 app.use(express.json());
+app.use(cors())
 
 connectDB()
 app.use("/api", heroRoutes);
