@@ -27,7 +27,7 @@ This API provides information about My Hero Academia characters, including their
 
 ### Update Character Information
 
-- **Endpoint**: `/api/characters/:id`
+- **Endpoint**: `/api/hero/:id`
 - **HTTP Verb**: `PUT`
 - **Description**: Update an existing character's information.
 
